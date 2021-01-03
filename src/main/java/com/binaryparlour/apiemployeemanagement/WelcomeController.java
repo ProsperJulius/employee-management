@@ -9,6 +9,6 @@ public class WelcomeController {
 
     @GetMapping(value = "/api")
     private String welcomeMessage(){
-        return "welcome user to the wonderfull app of mine";
+        return "welcome user to the wonderfull app of yours";
     }
 }
