@@ -8,15 +8,16 @@ pipeline {
         }
         stage('Maven Build') {
             steps {
-                mvnHome = tool name: 'Maven3', type: 'maven'
-                sh "${mvnHome} mvn clean package"
+                //mvnHome = tool name: 'Maven3', type: 'maven'
+                //sh "${mvnHome} mvn clean package"
                 
             }
         }
          stage('Docker Build') {
                     steps {   
-                     docker = 'Docker'
-                     sh 'docker build -t employee-management'
+                     ///docker = 'Docker'
+                     //sh 'docker build -t employee-management'
+                        echo 'soon it will work baby'
                     }
                 }
     }
