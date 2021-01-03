@@ -10,12 +10,13 @@ pipeline {
             steps {
                 //mvnHome = tool name: 'Maven3', type: 'maven'
                 //sh "${mvnHome} mvn clean package"
+                echo 'this prosper'
                 
             }
         }
          stage('Docker Build') {
                     steps {   
-                     ///docker = 'Docker'
+                     //docker = 'Docker'
                      //sh 'docker build -t employee-management'
                         echo 'soon it will work baby'
                     }
