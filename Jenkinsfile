@@ -3,11 +3,12 @@ pipeline {
     stages {
         stage('Maven Build') {
             steps {
-             sh 'mvn clean package'
+                def mvnHome = tool name: 'Maven3', type: 'maven'
+                sh "${mvnHome} mvn clean package"
             }
         }
          stage('Docker Build') {
-                    steps {
+                    steps {   
                      sh 'docker build -t employee-management'
                     }
                 }
