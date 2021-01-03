@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('SCM checkout'){
             steps{
-             sh 'echo hey jusasane'
+             echo 'hey jusasane its now working'
             }
         }
         stage('Maven Build') {
             steps {
-                def mvnHome = tool name: 'Maven3', type: 'maven'
+                mvnHome = tool name: 'Maven3', type: 'maven'
                 sh "${mvnHome} mvn clean package"
                 
             }
