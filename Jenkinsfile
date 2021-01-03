@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('SCM checkout'){
             steps{
-            def gitHome = tool name: 'Default', type: 'git'
-                sh "${gitHome} git 'https://github.com/ProsperJulius/employee-management' "
+             sh 'echo hey jusasane'
             }
         }
         stage('Maven Build') {
