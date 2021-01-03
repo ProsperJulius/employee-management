@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+        maven 'Maven'
+        docker 'Docker'
+    }
     stages {
         stage('SCM checkout'){
             steps{
@@ -8,16 +12,16 @@ pipeline {
         }
         stage('Maven Build') {
             steps {
-                //mvnHome = tool name: 'Maven3', type: 'maven'
-                //sh "${mvnHome} mvn clean package"
+                
+                sh 'mvn clean package'
                 echo 'this prosper'
                 
             }
         }
          stage('Docker Build') {
                     steps {   
-                     //docker = 'Docker'
-                     //sh 'docker build -t employee-management'
+                     
+                     sh 'docker build -t employee-management'
                         echo 'soon it will work baby'
                     }
                 }
