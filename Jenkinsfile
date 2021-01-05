@@ -22,7 +22,7 @@ pipeline {
                     steps {   
                          script{
            
-                 sh 'docker build -t employee-management'
+                 sh 'docker build .
                         echo 'soon it will work baby'
                              
         }
