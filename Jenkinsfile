@@ -22,7 +22,7 @@ pipeline {
                     steps {   
                          script{
            
-                 sh 'docker build .
+                 sh 'docker build . '
             
                              
         }
