@@ -21,7 +21,7 @@ pipeline {
          stage('Docker Build') {
                     steps {   
                          script{
-            unstash 'targetfiles'
+           
                  sh 'docker build -t employee-management'
                         echo 'soon it will work baby'
                              
