@@ -23,7 +23,7 @@ pipeline {
                          script{
            
                  sh 'docker build .
-                        echo 'soon it will work baby'
+            
                              
         }
                      
